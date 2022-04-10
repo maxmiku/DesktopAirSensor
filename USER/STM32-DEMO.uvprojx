@@ -418,6 +418,16 @@
               <FileType>1</FileType>
               <FilePath>.\oled.c</FilePath>
             </File>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\stm32f10x_exti.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

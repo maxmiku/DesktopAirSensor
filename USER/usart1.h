@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 void USART1_Config(void);
-void UART1Test(void);
+void UART1Deal(void);
  /*发送一个字节数据*/
 void UART1SendByte(unsigned char SendData);
 #endif /* __USART1_H */

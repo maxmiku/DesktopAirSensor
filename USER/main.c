@@ -35,7 +35,9 @@ int main(void)
 	while(1){
 		LED1( ON );
 		delay_ms(200);
+		UART1Deal();
 		LED1( OFF );
 		delay_ms(200);
+		UART1Deal();
 	}
 }

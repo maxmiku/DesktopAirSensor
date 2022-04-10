@@ -3,13 +3,13 @@
         {
             "name": "USART1-DEMO",
             "includePath": [
-                "d:\\Code\\Github\\OLEDDevelopment\\STM32\\OLEDTest\\CMSIS",
-                "d:\\Code\\Github\\OLEDDevelopment\\STM32\\OLEDTest\\FWlib\\inc",
-                "d:\\Code\\Github\\OLEDDevelopment\\STM32\\OLEDTest\\USER",
-                "D:\\Keil_v5\\ARM\\ARMCC\\include",
-                "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "d:\\Code\\Github\\OLEDDevelopment\\STM32\\OLEDTest\\CMSIS\\startup",
-                "d:\\Code\\Github\\OLEDDevelopment\\STM32\\OLEDTest\\FWlib\\src"
+                "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\CMSIS",
+                "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\FWlib\\inc",
+                "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\USER",
+                "C:\\Keil_v5\\ARM\\ARMCC\\include",
+                "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
+                "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\CMSIS\\startup",
+                "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\FWlib\\src"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
