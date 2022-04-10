@@ -13,6 +13,7 @@
 #include "usart1.h"
 #include <stdarg.h>
 #include "misc.h"
+#include "serialDeal.h"
 
 void USART1_Config(void)
 {
@@ -94,15 +95,16 @@ void UART1Deal(void)
 //串口中断处理程序
 void USART1_IRQHandler()
 {
-	u8 k;
+	uint8_t k;
 	//判断现在发生的中断的类型，可以用USART_GetFlagStatus吗？
 	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
 	{
 		//读接收寄存器，系统自动清除接收中断标志位
 		k = USART_ReceiveData(USART1);
-		k = k + 2;
+		s_receive(k);
+		// k = k + 2;
 		//发送数据
-		USART_SendData(USART1, k);
+		// USART_SendData(USART1, k);
 
 		//等发送完成；可以用USART_GetITStatus吗？
 		while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);

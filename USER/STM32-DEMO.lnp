@@ -7,6 +7,7 @@
 ".\oled.o"
 ".\misc.o"
 ".\stm32f10x_exti.o"
+".\serialdeal.o"
 ".\stm32f10x_gpio.o"
 ".\stm32f10x_rcc.o"
 ".\stm32f10x_usart.o"

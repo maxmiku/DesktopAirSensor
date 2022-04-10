@@ -12,3 +12,4 @@
 .\usart1.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\usart1.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\usart1.o: misc.h
+.\usart1.o: serialDeal.h

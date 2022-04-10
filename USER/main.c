@@ -18,7 +18,7 @@
 
 int main(void)
 {  
-	u8 i = 0;
+	uint8_t i = 0;
 	SystemInit();	//配置系统时钟为 72M 
 	
    
