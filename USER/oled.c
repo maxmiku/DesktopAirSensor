@@ -382,17 +382,17 @@ u8 Get_data_from_ROM(void)
 
 		if (OLED_READ_FS0_Read())
 		{
-			UART1SendByte('#');
+			// UART1SendByte('#');
 			// LED1(ON);
 			read++;
 		}else{
-			UART1SendByte(' ');
+			// UART1SendByte(' ');
 			// LED1(OFF);
 		}
 
 		OLED_SCL_Set();
 	}
-	UART1SendByte('\n');
+	// UART1SendByte('\n');
 	// delay_ms(10);
 
 	return read;
