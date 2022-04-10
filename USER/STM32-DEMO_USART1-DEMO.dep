@@ -1,7 +1,7 @@
 Dependencies for Project 'STM32-DEMO', Target 'USART1-DEMO': (DO NOT MODIFY !)
 CompilerVersion: 5030076::V5.03 [Build 76]::ARMCC
 F (..\CMSIS\startup\startup_stm32f10x_hd.s)(0x6252962E)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_USART1-DEMO-IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include--pd "__UVISION_VERSION SETA 535" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list ..\listing\startup_stm32f10x_hd.lst --xref -o .\startup_stm32f10x_hd.o --depend .\startup_stm32f10x_hd.d)
-F (.\main.c)(0x6252C8F1)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER-I.\RTE\_USART1-DEMO-IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+F (.\main.c)(0x6252CF3B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER-I.\RTE\_USART1-DEMO-IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\main.o --omf_browse .\main.crf --depend .\main.d)
 I (..\CMSIS\stm32f10x.h)(0x6252962E)
 I (..\CMSIS\core_cm3.h)(0x6252962E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x51C7C554)
@@ -24,7 +24,7 @@ I (..\USER\stm32f10x_conf.h)(0x6252962E)
 I (..\FWlib\inc\stm32f10x_gpio.h)(0x6252962E)
 I (..\FWlib\inc\stm32f10x_rcc.h)(0x6252962E)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x6252962E)
-F (.\usart1.c)(0x6252C928)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER-I.\RTE\_USART1-DEMO-IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\usart1.o --omf_browse .\usart1.crf --depend .\usart1.d)
+F (.\usart1.c)(0x6252CEDD)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER-I.\RTE\_USART1-DEMO-IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\usart1.o --omf_browse .\usart1.crf --depend .\usart1.d)
 I (usart1.h)(0x6252C848)
 I (..\CMSIS\stm32f10x.h)(0x6252962E)
 I (..\CMSIS\core_cm3.h)(0x6252962E)
@@ -36,6 +36,8 @@ I (..\FWlib\inc\stm32f10x_rcc.h)(0x6252962E)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x6252962E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x51C7C554)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x51C7C554)
+I (misc.h)(0x6252962E)
+I (stm32f10x_exti.h)(0x6252962E)
 F (.\led.c)(0x6252962E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER-I.\RTE\_USART1-DEMO-IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="535" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\led.o --omf_browse .\led.crf --depend .\led.d)
 I (led.h)(0x6252962E)
 I (..\CMSIS\stm32f10x.h)(0x6252962E)

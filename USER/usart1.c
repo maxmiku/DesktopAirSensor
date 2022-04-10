@@ -12,11 +12,15 @@
 
 #include "usart1.h"
 #include <stdarg.h>
+#include "misc.h"
+#include "stm32f10x_exti.h"
+
 
 void USART1_Config(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	USART_InitTypeDef USART_InitStructure;
+	NVIC_InitTypeDef NVIC_InitStructure;
 
 	/* 使能 USART1 时钟*/
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1 | RCC_APB2Periph_GPIOA, ENABLE);
@@ -41,8 +45,24 @@ void USART1_Config(void)
 	USART_Init(USART1, &USART_InitStructure);										//初始化USART1
 	USART_Cmd(USART1, ENABLE);														// USART1使能
 
-	
+	//中断测试
+	//打开USART1的串口接收中断：
+	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 
+	//清除中断标志位
+	USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+
+	//总中断设置
+	//记得配置中断参数之前，要进行中断分组；
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);
+
+	//选择USART1中断
+	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;//使能串口中断
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;//抢占优先级
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;//次响应优先级
+
+	NVIC_Init(&NVIC_InitStructure);
 }
 
 /*发送一个字节数据*/
@@ -67,7 +87,7 @@ unsigned char UART1GetByte(unsigned char *GetData)
 void UART1Deal(void)
 {
 	unsigned char i = 0;
-	while(UART1GetByte(&i) == 1)
+	while (UART1GetByte(&i) == 1)
 	{
 		USART_SendData(USART1, i);
 	}

@@ -13,6 +13,26 @@
 #include "oled.h"
 
 
+
+void USART1_IRQHandler ()
+{
+    u8 k;
+    //判断现在发生的中断的类型，可以用USART_GetFlagStatus吗？
+    if(USART_GetITStatus(USART1,USART_IT_RXNE)== SET)
+    {
+        //读接收寄存器，系统自动清除接收中断标志位
+        k=USART_ReceiveData(USART1);
+        k=k+2;
+        //发送数据
+        USART_SendData(USART1,k);
+
+        //等发送完成；可以用USART_GetITStatus吗？
+        while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==RESET);
+    }
+}
+
+
+
 int main(void)
 {  
 	     
@@ -35,9 +55,9 @@ int main(void)
 	while(1){
 		LED1( ON );
 		delay_ms(200);
-		UART1Deal();
+		// UART1Deal();
 		LED1( OFF );
 		delay_ms(200);
-		UART1Deal();
+		// UART1Deal();
 	}
 }
