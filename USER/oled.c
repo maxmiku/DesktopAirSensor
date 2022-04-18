@@ -63,13 +63,13 @@ int OLED_TEST()
 	OLED_DisplayTurn(0); //0正常显示 1 屏幕翻转显示
 	OLED_Clear();
 
-	delay_ms(1000);
+	Delay_ms(1000);
 
 	// printf("oled写出内容\n");
 	// OLED_Display_128x64(bmp1);
 
 	// printf("延迟2秒\n");
-	// delay_ms(2000);
+	// Delay_ms(2000);
 
 	// printf("oled写清屏\n");
 	// OLED_Clear();
@@ -80,9 +80,9 @@ int OLED_TEST()
 	// OLED_Display_GB2312_string(0,6,"诚信与质量第一！");
 
 	// printf("延迟2秒\n");
-	// delay_ms(2000);
+	// Delay_ms(2000);
 	// OLED_Clear();
-	// delay_ms(50);
+	// Delay_ms(50);
 	// printf("oled写出第二屏内容\n");
 
 	// OLED_Display_GB2312_string(0,0,"<!@#$%^&*()_-+]/");	/*在第1页，第1列，显示一串16x16点阵汉字或8*16的ASCII字*/
@@ -94,9 +94,9 @@ int OLED_TEST()
 	// OLED_Display_string_5x7(0,7,"Tel:0755-32910715");/*显示一串5x7点阵的ASCII字*/
 
 	// printf("延迟2秒\n");
-	// delay_ms(2000);
+	// Delay_ms(2000);
 	// OLED_Clear();
-	// delay_ms(20);
+	// Delay_ms(20);
 	// printf("oled写出第三屏内容\n");
 
 	// OLED_Display_GB2312_string(0,0,"下一节课:");
@@ -107,11 +107,11 @@ int OLED_TEST()
 	// for(int i=0;i<10;i++){
 	// sprintf(strtmp,"今天剩余 %d 节",i);
 	// OLED_Display_GB2312_string(0,6, strtmp);
-	// delay_ms(2000);
+	// Delay_ms(2000);
 
 	// }
 
-	// delay_ms(3000);
+	// Delay_ms(3000);
 
 	// OLED_Display_128x64(data);
 
@@ -119,9 +119,9 @@ int OLED_TEST()
 	// printf("%d\n",i);
 	// uint8_t data[6]={0,0,0,0,i,0};
 	// OLED_Display_5x7(0,0,data);
-	// delay_ms(1000);
+	// Delay_ms(1000);
 	// }
-	// delay_ms(2000);
+	// Delay_ms(2000);
 	// OLED_Clear();
 	
 	OLED_Display_GB2312_string(16, 2, "程序运行结束");
@@ -130,7 +130,7 @@ int OLED_TEST()
 
 	// OLED_ColorTurn(0);
 
-	// delay_ms(3000);
+	// Delay_ms(3000);
 
 	// OLED_DisPlay_Off();
 
@@ -139,16 +139,6 @@ int OLED_TEST()
 	return 0;
 }
 
-void delay_ms(unsigned int ms)
-{
-	unsigned int i = 0;
-	while (ms--)
-	{
-		i = 12000; //自己定义
-		while (i--)
-			;
-	}
-}
 
 //向SSD1306写入一个字节。
 //mode:数据/命令标志 0,表示命令;1,表示数据;
@@ -314,7 +304,7 @@ void OLED_Init(void)
 {
 	OLED_CS_Set();
 	OLED_ROM_CS_Set();
-	delay_ms(200);
+	Delay_ms(200);
 
 	OLED_WR_Byte(0xAE, OLED_CMD); //--turn off oled panel
 	OLED_WR_Byte(0x00, OLED_CMD); //---set low column address
@@ -365,7 +355,7 @@ void Send_Command_to_ROM(uint8_t dat)
 		}
 		dat <<= 1;
 		OLED_SCL_Set();
-		// delay_ms(1);
+		// Delay_ms(1);
 	}
 }
 
@@ -376,7 +366,7 @@ uint8_t Get_data_from_ROM(void)
 	for (i = 0; i < 8; i++)
 	{
 		OLED_SCL_Clr();
-		// delay_ms(10);
+		// Delay_ms(10);
 
 		read <<= 1;
 
@@ -393,7 +383,7 @@ uint8_t Get_data_from_ROM(void)
 		OLED_SCL_Set();
 	}
 	// UART1SendByte('\n');
-	// delay_ms(10);
+	// Delay_ms(10);
 
 	return read;
 }

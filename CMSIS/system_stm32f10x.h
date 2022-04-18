@@ -47,6 +47,10 @@ extern const uint32_t SystemFrequency_APB2Clk;           /*!< APB Peripheral Bus
   * @}
   */
 
+
+
+
+
 /** @addtogroup Exported_Constants
   * @{
   */

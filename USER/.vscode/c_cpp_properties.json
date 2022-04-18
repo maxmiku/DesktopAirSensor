@@ -6,8 +6,8 @@
                 "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\CMSIS",
                 "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\FWlib\\inc",
                 "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\USER",
-                "C:\\Keil_v5\\ARM\\ARMCC\\include",
-                "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\CMSIS\\startup",
                 "d:\\Code\\STM32\\#Working\\DesktopAirSensor\\FWlib\\src"
             ],

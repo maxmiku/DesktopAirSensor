@@ -573,13 +573,13 @@ ARM Macro Assembler    Page 9
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\startup_stm32f10x_hd.d -o.\startup_stm32f10x_hd.o -I.\RTE\_USART
-1-DEMO -IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Incl
-ude -IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\In
-clude --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 535" 
---predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --predefine="_RTE_
- SETA 1" --list=..\listing\startup_stm32f10x_hd.lst ..\CMSIS\startup\startup_st
-m32f10x_hd.s
+ork --depend=.\startup_stm32f10x_hd.d -o.\startup_stm32f10x_hd.o -Id:\Code\STM3
+2\orking\DesktopAirSensor\USER\RTE -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\
+Core\Include -ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include --pr
+edefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_
+VERSION SETA 520" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" 
+--list=..\listing\startup_stm32f10x_hd.lst ..\CMSIS\startup\startup_stm32f10x_h
+d.s
 
 
 
@@ -1466,4 +1466,4 @@ Symbol: __main
       At line 165 in file ..\CMSIS\startup\startup_stm32f10x_hd.s
 Comment: __main used once
 1 symbol
-424 symbols in table
+425 symbols in table

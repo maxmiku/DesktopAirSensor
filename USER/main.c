@@ -11,6 +11,12 @@
 #include "usart1.h"
 #include "led.h"
 #include "oled.h"
+#include "Delay.h"
+#include "IICUtils.h"
+#include "SHT30.h"
+#include "stdio.h"
+#include "string.h"
+#include "serialDeal.h"
 
 
 
@@ -19,10 +25,20 @@
 int main(void)
 {  
 	uint8_t i = 0;
+	char buff[10];
 	SystemInit();	//配置系统时钟为 72M 
-	
+	USART1_Config(); //USART1 配置 	
+	printf("USART初始化完成!");
+	s_sendStr("测试数据",9);
+	Delay_Init();
+	printf("Delay_Init初始化完成!");
+	IIC_Init();
+	printf("IIC初始化完成!");
+
+	SHT30_read_result(0x44);
+	printf("SHT30_read完成!");
    
-	USART1_Config(); //USART1 配置 		
+		
 	
 	LED_GPIO_Config();
 
@@ -33,16 +49,21 @@ int main(void)
 
 	
 	
-	LED1( OFF );		
+	LED1( OFF );	
+	printf("程序运行完成");	
 
 	while(1){
 		LED1( ON );
-		delay_ms(200);
+		Delay_ms(200);
 		// UART1Deal();
 		LED1( OFF );
-		delay_ms(200);
+		Delay_ms(200);
 		i++;
 		OLED_ShowNum(0,6,i,6);
+
+		//sprintf(buff,"%i",i);
+
+		//s_sendStr(buff,10);
 		// UART1Deal();
 	}
 }

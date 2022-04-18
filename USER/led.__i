@@ -1,6 +1,6 @@
--c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER
--I.\RTE\_USART1-DEMO
--IC:\Users\jmche\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
--IC:\Users\jmche\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
--D__UVISION_VERSION="535" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\CMSIS -I ..\FWlib\inc -I ..\USER
+-I d:\Code\STM32\orking\DesktopAirSensor\USER\RTE
+-I D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+-I D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
 -o .\led.o --omf_browse .\led.crf --depend .\led.d "led.c"

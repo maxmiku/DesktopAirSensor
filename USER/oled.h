@@ -2,6 +2,7 @@
 #define	__OLED_H
 
 #include "stm32f10x.h"
+#include "delay.h"
 
 
 //~ #define uint8_t  char
@@ -40,7 +41,6 @@
 void OLED_GPIO_CONFIG(void);	//≈‰÷√GPIO
 int OLED_TEST(void);	//OLED≤‚ ‘≥Ã–Ú
 
-void delay_ms(unsigned int ms);
 void OLED_ColorTurn(uint8_t i);
 void OLED_DisplayTurn(uint8_t i);
 void OLED_WR_Byte(uint8_t dat,uint8_t cmd);
