@@ -8,6 +8,8 @@
 
 extern char humiture_buff1[20];
 void SHT30_read_result(u8 addr);
+float SHT30_GetTemperature(void);
+float SHT30_GetHumidity(void);
  
 #endif
 

@@ -25,7 +25,6 @@
 int main(void)
 {  
 	uint8_t i = 0;
-	char buff[10];
 	SystemInit();	//配置系统时钟为 72M 
 	USART1_Config(); //USART1 配置 	
 	printf("USART初始化完成!");
@@ -35,11 +34,8 @@ int main(void)
 	IIC_Init();
 	printf("IIC初始化完成!");
 
-	SHT30_read_result(0x44);
-	printf("SHT30_read完成!");
-   
-		
 	
+   
 	LED_GPIO_Config();
 
 	OLED_GPIO_CONFIG();
@@ -54,12 +50,15 @@ int main(void)
 
 	while(1){
 		LED1( ON );
-		Delay_ms(200);
+		Delay_ms(1000);
 		// UART1Deal();
 		LED1( OFF );
-		Delay_ms(200);
+		Delay_ms(1000);
 		i++;
-		OLED_ShowNum(0,6,i,6);
+		SHT30_read_result(0x44);
+
+		OLED_ShowNum(0,4,SHT30_GetTemperature(),6);
+		OLED_ShowNum(0,6,SHT30_GetHumidity(),6);
 
 		//sprintf(buff,"%i",i);
 

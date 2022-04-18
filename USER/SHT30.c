@@ -6,6 +6,10 @@
 #define write 0
 #define read  1
 
+
+float Temperature=0;
+float Humidity=0;
+
 float humiture[4];
 char humiture_buff1[20];
 
@@ -20,8 +24,7 @@ void SHT30_read_result(u8 addr)
 {
 	u16 tem,hum;
 	u16 buff[6];
-	float Temperature=0;
-	float Humidity=0;
+	
 	
 	printf("iic_start");
 
@@ -76,4 +79,10 @@ void SHT30_read_result(u8 addr)
 	tem=0;
 }
 
+float SHT30_GetTemperature(){
+	return Temperature;
+}
 
+float SHT30_GetHumidity(){
+	return Humidity;
+}
