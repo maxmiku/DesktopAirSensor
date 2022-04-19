@@ -59,6 +59,7 @@ void OLED_get_data_from_ROM(uint8_t addrHigh,uint8_t addrMid,uint8_t addrLow,uin
 void OLED_Display_GB2312_string(uint8_t x,uint8_t y,char *text);
 void OLED_Display_string_5x7(uint8_t x,uint8_t y,char *text);
 void OLED_ShowNum(uint8_t x,uint8_t y,float num,uint8_t len);
+void OLED_ShowInt(uint8_t x, uint8_t y, uint16_t num1, uint8_t len);
 void OLED_DisPlay_Off(void);
 
 					

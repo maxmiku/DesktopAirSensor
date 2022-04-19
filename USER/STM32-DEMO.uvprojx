@@ -438,6 +438,11 @@
               <FileType>1</FileType>
               <FilePath>.\delay.c</FilePath>
             </File>
+            <File>
+              <FileName>SGP30.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SGP30.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

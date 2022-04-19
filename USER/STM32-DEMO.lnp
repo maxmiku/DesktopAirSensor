@@ -10,6 +10,7 @@
 ".\sht30.o"
 ".\iicutils.o"
 ".\delay.o"
+".\sgp30.o"
 ".\stm32f10x_gpio.o"
 ".\stm32f10x_rcc.o"
 ".\stm32f10x_usart.o"

@@ -510,7 +510,7 @@ void OLED_Display_string_5x7(uint8_t x, uint8_t y, char *text)
 	}
 }
 
-//显示2个数字
+//显示小数
 //x,y :起点坐标
 //num1：要显示的小数
 //len :数字的位数
@@ -530,6 +530,59 @@ void OLED_ShowNum(uint8_t x, uint8_t y, float num1, uint8_t len)
 		{
 			x -= 8;
 		} //当显示出来两个小数之后，空出小数点的位置
+		switch (t)
+		{
+		case 0:
+			OLED_Display_GB2312_string(x, y, "0");
+			break;
+		case 1:
+			OLED_Display_GB2312_string(x, y, "1");
+			break;
+		case 2:
+			OLED_Display_GB2312_string(x, y, "2");
+			break;
+		case 3:
+			OLED_Display_GB2312_string(x, y, "3");
+			break;
+		case 4:
+			OLED_Display_GB2312_string(x, y, "4");
+			break;
+		case 5:
+			OLED_Display_GB2312_string(x, y, "5");
+			break;
+		case 6:
+			OLED_Display_GB2312_string(x, y, "6");
+			break;
+		case 7:
+			OLED_Display_GB2312_string(x, y, "7");
+			break;
+		case 8:
+			OLED_Display_GB2312_string(x, y, "8");
+			break;
+		case 9:
+			OLED_Display_GB2312_string(x, y, "9");
+			break;
+		}
+	}
+}
+
+//显示整数
+//x,y :起点坐标
+//num1：要显示的整数
+//len :数字的位数
+void OLED_ShowInt(uint8_t x, uint8_t y, uint16_t num1, uint8_t len)
+{
+	uint8_t i;
+	u32 t, num;
+	x = x + len * 8;						//要显示的小数最低位的横坐标
+	num = num1;							//将小数左移两位并转化为整数
+	// OLED_Display_GB2312_string(x - 24, y, "."); //显示小数点
+	for (i = 0; i < len; i++)
+	{
+		t = num % 10;	//取个位数的数值
+		num = num / 10; //将整数右移一位
+		x -= 8;
+		
 		switch (t)
 		{
 		case 0:

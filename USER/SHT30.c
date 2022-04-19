@@ -26,26 +26,26 @@ void SHT30_read_result(u8 addr)
 	u16 buff[6];
 	
 	
-	printf("iic_start");
+	// printf("iic_start");
 
 	IIC_Start();
-	printf("iic_start_success");
+	// printf("iic_start_success");
 
 	IIC_Send_Byte(addr<<1 | write);//写7位I2C设备地址加0作为写取位,1为读取位
-	printf("sht_发送地址");
+	// printf("sht_发送地址");
 	IIC_Wait_Ack();
 	IIC_Send_Byte(0x2C);
-	printf("sht_初始化1");
+	// printf("sht_初始化1");
 
 	IIC_Wait_Ack();
 	IIC_Send_Byte(0x06);
-	printf("sht_初始化2");
+	// printf("sht_初始化2");
 
 	IIC_Wait_Ack();
 	IIC_Stop();
 	Delay_ms(50);
 
-	printf("SHT初始化成功!");
+	// printf("SHT初始化成功!");
 
 	IIC_Start();
 	IIC_Send_Byte(addr<<1 | read);//写7位I2C设备地址加0作为写取位,1为读取位

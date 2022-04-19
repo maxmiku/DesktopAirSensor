@@ -17,4 +17,5 @@
 .\main.o: sys.h
 .\main.o: SHT30.h
 .\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\main.o: SGP30.h
 .\main.o: serialDeal.h
