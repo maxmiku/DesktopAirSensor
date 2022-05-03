@@ -81,7 +81,8 @@ int main(void)
 			// sprintf(buff,"CO2  %d",SGP30_GetCO2Data());
 			// Delay_ms(10);
 			// OLED_Display_GB2312_string(0,0,buff);
-			OLED_Display_GB2312_string(0,0,"CO2  ");
+			OLED_Display_GB2312_string(0,0,"CO   ");
+			OLED_Display_string_5x7(16,1,"2");
 			OLED_ShowInt(40,0,SGP30_GetCO2Data(),4);
 			OLED_Display_GB2312_string(72,0,"ppm");
 
