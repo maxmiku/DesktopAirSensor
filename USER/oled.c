@@ -1,3 +1,13 @@
+/**
+ * @file oled.c
+ * @author Lok
+ * @brief 中景园oled驱动程序
+ * @version 0.2
+ * @date 2022-05-12
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "oled.h"
 
 #include <stdio.h>
@@ -19,10 +29,11 @@ void OLED_GPIO_CONFIG()
 	//输出初始化
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; //推挽输出
 
-	GPIO_InitStructure.GPIO_Pin = OLED_SCL | OLED_DC | OLED_CS | OLED_ROM_CS | OLED_SDA;
+	GPIO_InitStructure.GPIO_Pin = OLED_SCL;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-
+	GPIO_InitStructure.GPIO_Pin = OLED_DC | OLED_CS | OLED_ROM_CS | OLED_SDA;
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
 
 	//输入初始化
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; //浮空输入
@@ -406,7 +417,16 @@ void OLED_get_data_from_ROM(uint8_t addrHigh, uint8_t addrMid, uint8_t addrLow, 
 }
 
 u32 fontaddr = 0;
-void OLED_Display_GB2312_string(uint8_t x, uint8_t y, char *text)
+/**
+ * @brief 显示GB2312字符在OLED上
+ * 一个中文GB2312字符为16x16 西文字符8x16
+ * @param x 横向坐标 0-127
+ * @param y 纵向页 0-7 (每页8位)
+ * @param text 欲显示的字符串
+ * @param reverse 反显 0-正常  1-反显
+ * @param cleanUp 清空区域后再显示字符 0-不清空 1-清空
+ */
+void OLED_Display_GB2312_string(uint8_t x, uint8_t y, char *text, uint8_t reverse, uint8_t cleanUp)
 {
 	uint8_t i = 0;
 	uint8_t addrHigh, addrMid, addrLow;
@@ -480,6 +500,11 @@ void OLED_Display_GB2312_string(uint8_t x, uint8_t y, char *text)
 		}
 	}
 }
+
+void OLED_Display_GB2312_string(uint8_t x, uint8_t y, char *text){
+
+}
+
 
 void OLED_Display_string_5x7(uint8_t x, uint8_t y, char *text)
 {
