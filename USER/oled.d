@@ -12,7 +12,7 @@
 .\oled.o: delay.h
 .\oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\oled.o: led.h
-.\oled.o: bmp.h
 .\oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\oled.o: bmp.h
+.\oled.o: led.h
 .\oled.o: usart1.h

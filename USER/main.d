@@ -1,4 +1,5 @@
 .\main.o: main.c
+.\main.o: Delay.h
 .\main.o: ..\CMSIS\stm32f10x.h
 .\main.o: ..\CMSIS\core_cm3.h
 .\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -8,14 +9,13 @@
 .\main.o: ..\CMSIS\stm32f10x.h
 .\main.o: ..\FWlib\inc\stm32f10x_rcc.h
 .\main.o: ..\FWlib\inc\stm32f10x_usart.h
-.\main.o: usart1.h
-.\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\main.o: led.h
-.\main.o: oled.h
-.\main.o: delay.h
 .\main.o: IICUtils.h
 .\main.o: sys.h
-.\main.o: SHT30.h
-.\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\main.o: SGP30.h
+.\main.o: SHT30.h
+.\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\main.o: usart1.h
+.\main.o: led.h
+.\main.o: oled.h
 .\main.o: serialDeal.h

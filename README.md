@@ -49,6 +49,18 @@ Notice: The document will be written in Chinese. If you can't understand Chinese
 | GPIO | 芯片IO | 描述     |
 | ---- | ------ | -------- |
 | PB6  | SCL    | 时钟     |
-| PB7  | SDA    | 数据总线 |
+| PA12 | SDA    | 数据总线 |
 | GND  | GND    | 数字地   |
 | 3V3  | VCC    | 供电     |
+
+### OLED
+
+| GPIO | 芯片IO     | 描述     |
+| ---- | ---------- | -------- |
+| PA7  | CLK (SCL)  | 时钟     |
+| PB0  | MOSI (SDA) | 数据总线 |
+| PB1  | DC1        | 数字地   |
+| PB2  | CS1        | 供电     |
+| PB11 | FSO        |          |
+| PB10 | CS2        |          |
+
