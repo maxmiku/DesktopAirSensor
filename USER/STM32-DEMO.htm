@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\STM32-DEMO.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\STM32-DEMO.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu May 12 16:04:16 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon May 23 22:56:37 2022
 <BR><P>
 <H3>Maximum Stack Usage =        304 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -306,26 +306,26 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 520 bytes, Stack size 40 bytes, main.o(.text))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 690 bytes, Stack size 40 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = main &rArr; OLED_ShowNum &rArr; OLED_Display_GB2312_string &rArr; OLED_Display_GB2312_string_format &rArr; OLED_Display_16x16_reverse &rArr; OLED_address &rArr; OLED_WR_Byte &rArr; OLED_WR_Byte_reverse
 </UL>
 <BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;s_sendStr
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_Config
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHT30_read_result
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHT30_GetTemperature
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHT30_GetHumidity
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_read_result
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHT30_GetTemperature
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHT30_GetHumidity
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_read_result
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_SelfCheck
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_Init
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_GetTVOCData
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_GetCO2Data
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowInt
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_GetTVOCData
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_GetCO2Data
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowInt
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_GPIO_CONFIG
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_GB2312_string_format
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_GB2312_string
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
@@ -335,7 +335,7 @@ Global Symbols
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_Init
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -527,7 +527,7 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_GB2312_string_format
 </UL>
 
@@ -559,8 +559,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_GB2312_string_format
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_TEST
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowInt
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowInt
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -578,10 +578,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_5x7_reverse
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
 </UL>
 
-<P><STRONG><a name="[64]"></a>OLED_Display_string_5x7</STRONG> (Thumb, 128 bytes, Stack size 48 bytes, oled.o(.text))
+<P><STRONG><a name="[5e]"></a>OLED_Display_string_5x7</STRONG> (Thumb, 128 bytes, Stack size 48 bytes, oled.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = OLED_Display_string_5x7 &rArr; OLED_Display_5x7 &rArr; OLED_Display_5x7_reverse &rArr; OLED_address &rArr; OLED_WR_Byte &rArr; OLED_WR_Byte_reverse
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_5x7
@@ -629,7 +629,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ColorTurn
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DisplayTurn
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_string_5x7
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_GB2312_string
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
@@ -662,7 +662,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_8x16_reverse
 </UL>
 
-<P><STRONG><a name="[5f]"></a>OLED_ShowNum</STRONG> (Thumb, 236 bytes, Stack size 40 bytes, oled.o(.text))
+<P><STRONG><a name="[63]"></a>OLED_ShowNum</STRONG> (Thumb, 236 bytes, Stack size 40 bytes, oled.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = OLED_ShowNum &rArr; OLED_Display_GB2312_string &rArr; OLED_Display_GB2312_string_format &rArr; OLED_Display_16x16_reverse &rArr; OLED_address &rArr; OLED_WR_Byte &rArr; OLED_WR_Byte_reverse
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
@@ -672,7 +672,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[66]"></a>OLED_ShowInt</STRONG> (Thumb, 320 bytes, Stack size 32 bytes, oled.o(.text))
+<P><STRONG><a name="[60]"></a>OLED_ShowInt</STRONG> (Thumb, 320 bytes, Stack size 32 bytes, oled.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = OLED_ShowInt &rArr; OLED_Display_GB2312_string &rArr; OLED_Display_GB2312_string_format &rArr; OLED_Display_16x16_reverse &rArr; OLED_address &rArr; OLED_WR_Byte &rArr; OLED_WR_Byte_reverse
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_GB2312_string
@@ -743,7 +743,7 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
 </UL>
 
-<P><STRONG><a name="[68]"></a>SHT30_read_result</STRONG> (Thumb, 460 bytes, Stack size 64 bytes, sht30.o(.text))
+<P><STRONG><a name="[68]"></a>SHT30_read_result</STRONG> (Thumb, 424 bytes, Stack size 64 bytes, sht30.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = SHT30_read_result &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
@@ -759,18 +759,18 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5e]"></a>SHT30_GetTemperature</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sht30.o(.text))
+<P><STRONG><a name="[62]"></a>SHT30_GetTemperature</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sht30.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[60]"></a>SHT30_GetHumidity</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sht30.o(.text))
+<P><STRONG><a name="[64]"></a>SHT30_GetHumidity</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sht30.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -929,7 +929,7 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_read_result
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_read_result
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_SelfCheck
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_Init
 </UL>
@@ -943,7 +943,7 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Read_Byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_read_result
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_read_result
 </UL>
 
 <P><STRONG><a name="[aa]"></a>SGP30_Read_Word</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, sgp30.o(.text))
@@ -968,7 +968,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[63]"></a>SGP30_read_result</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, sgp30.o(.text))
+<P><STRONG><a name="[67]"></a>SGP30_read_result</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, sgp30.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = SGP30_read_result &rArr; SGP30_Send_Command &rArr; SGP30_IIC_Start_Write &rArr; IIC_Send_Byte &rArr; Delay_us
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SGP30_Read_DWord
@@ -977,11 +977,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[65]"></a>SGP30_GetCO2Data</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sgp30.o(.text))
+<P><STRONG><a name="[5f]"></a>SGP30_GetCO2Data</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sgp30.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[67]"></a>SGP30_GetTVOCData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sgp30.o(.text))
+<P><STRONG><a name="[61]"></a>SGP30_GetTVOCData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sgp30.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1237,7 +1237,7 @@ Global Symbols
 <P><STRONG><a name="[90]"></a>__aeabi_fmul</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, fmul.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_fmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
 </UL>
 
 <P><STRONG><a name="[b5]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text))
@@ -1292,10 +1292,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[91]"></a>__aeabi_f2uiz</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, ffixui.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
 </UL>
 
-<P><STRONG><a name="[61]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<P><STRONG><a name="[65]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SHT30_read_result
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1434,7 +1434,7 @@ Global Symbols
 
 <P><STRONG><a name="[116]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
-<P><STRONG><a name="[62]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
+<P><STRONG><a name="[66]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main

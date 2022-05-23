@@ -86,6 +86,17 @@ int main(void) {
             flushOLED = 0;
             OLED_Init();
 
+            OLED_Display_GB2312_string(0, 0, "CO   ");
+            OLED_Display_string_5x7(16, 1, "2");
+            OLED_ShowInt(40, 0, SGP30_GetCO2Data(), 4);
+            OLED_Display_GB2312_string(72, 0, "ppm");
+
+            // sprintf(buff,"TVOC %d",SGP30_GetTVOCData());
+            // Delay_ms(10);
+            OLED_Display_GB2312_string(0, 2, "TVOC ");
+            OLED_ShowInt(40, 2, SGP30_GetTVOCData(), 4);
+            OLED_Display_GB2312_string(72, 2, "ppd");
+
 			OLED_Display_GB2312_string(0, 4, "Temp ");
 			OLED_ShowNum(40, 4, SHT30_GetTemperature(), 4);
 			OLED_Display_GB2312_string(80, 4, "'C");
@@ -119,9 +130,13 @@ int main(void) {
             // 	SGP30_Init();
 
             // }
+            printf("取得CO2:%u ppm TVOC:%u ppd\n", SGP30_GetCO2Data(), SGP30_GetTVOCData());
+
         } else {
             OLED_Display_GB2312_string(0, 0, "SGP30");
             OLED_Display_GB2312_string(0, 2, "初始化中");
+            printf("SGP30初始化中... CO2:%u ppm TVOC:%u ppd\n", SGP30_GetCO2Data(), SGP30_GetTVOCData());
+
         }
 
         if(SHT30_read_result(0x44)){
@@ -144,6 +159,8 @@ int main(void) {
 			// OLED_Display_GB2312_string_format(40,6,127,7,buff,0,1,1);
 			// sprintf(buff,"%.2f%'C",SHT30_GetTemperature());
 			// OLED_Display_GB2312_string_format(40,4,127,5,buff,0,1,1);
+            printf("取得温湿度:%6.2f*C  %6.2f%%\n", SHT30_GetTemperature(), SHT30_GetHumidity());
+
 			
 		}
 

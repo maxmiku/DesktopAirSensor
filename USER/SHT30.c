@@ -79,7 +79,7 @@ uint8_t SHT30_read_result(u8 addr) {
     /*转换实际温度*/
     Temperature = (175.0 * (float)tem / 65535.0 - 45.0);  // T = -45 + 175 * tem / (2^16-1)
     Humidity = (100.0 * (float)hum / 65535.0);            // RH = hum*100 / (2^16-1)
-    printf("取得温湿度：%6.2f*C %6.2f%%\n", Temperature, Humidity);
+    // printf("取得温湿度：%6.2f*C %6.2f%%\n", Temperature, Humidity);
 
     if ((Temperature >= -20) && (Temperature <= 125) && (Humidity >= 0) && (Humidity <= 100))  //过滤错误数据
     {
