@@ -185,22 +185,22 @@ void OLED_WR_Byte_reverse(uint8_t dat, uint8_t cmd, uint8_t reverse) {
     }
     OLED_CS_Clr();
 	// Delay_us(1);
-    // if (reverse) {
-    //     //·­×ª
-    //     for (i = 0; i < 8; i++) {
-    //         OLED_SCL_Clr();
+    if (reverse) {
+        //·­×ª
+        for (i = 0; i < 8; i++) {
+            OLED_SCL_Clr();
 
-    //         if (dat & 0x80) {
-    //             OLED_SDA_Clr();
-    //         } else {
-    //             OLED_SDA_Set();
-    //         }
+            if (dat & 0x80) {
+                OLED_SDA_Clr();
+            } else {
+                OLED_SDA_Set();
+            }
 			
-    //         OLED_SCL_Set();
-	// 		Delay_us(10);
-    //         dat <<= 1;
-    //     }
-    // } else {
+            OLED_SCL_Set();
+			// Delay_us(10);
+            dat <<= 1;
+        }
+    } else {
         for (i = 0; i < 8; i++) {
             OLED_SCL_Clr();
 
@@ -215,7 +215,7 @@ void OLED_WR_Byte_reverse(uint8_t dat, uint8_t cmd, uint8_t reverse) {
 
             dat <<= 1;
         }
-    // }
+    }
     OLED_CS_Set();
     OLED_DC_Set();
 }
@@ -498,11 +498,7 @@ void OLED_Display_GB2312_string_format(uint8_t x, uint8_t y, uint8_t x1, uint8_t
     //  	return;
     //  }
 
-    if (x1 != 0) {
-        if (cleanUp) {
-            OLED_ClearPart(x, y, x1, y1, background & reverse);
-        }
-    }
+    
 
     while (text[i] > 0x00) {
         if ((text[i] >= 0xb0) && (text[i] <= 0xf7) && (text[i + 1] >= 0xa1)) {
@@ -552,6 +548,11 @@ void OLED_Display_GB2312_string_format(uint8_t x, uint8_t y, uint8_t x1, uint8_t
             i += 1;
         } else {
             i++;
+        }
+    }
+    if (x1 != 0) {
+        if (cleanUp) {
+            OLED_ClearPart(x, y, x1, y1, background & reverse);
         }
     }
 }

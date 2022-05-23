@@ -49,7 +49,7 @@ uint8_t SHT30_read_result(u8 addr) {
     // printf("sht_初始化1");
 
     IIC_Wait_Ack();
-    IIC_Send_Byte(0x10);  //慢速时钟更新
+    IIC_Send_Byte(0x06);  //慢速时钟更新
     // printf("sht_初始化2");
 
     IIC_Wait_Ack();

@@ -24,7 +24,7 @@ int main(void) {
     char buff[17];
 
     SystemInit();     //配置系统时钟为 72M
-    // USART1_Config();  // USART1 配置
+    USART1_Config();  // USART1 配置
     printf("USART初始化完成!\n");
     s_sendStr("测试数据", 9);
     Delay_Init();
@@ -46,7 +46,7 @@ int main(void) {
 
     LED1(ON);  // 亮
     OLED_Init();
-    OLED_TEST();
+    // OLED_TEST();
 
 
     OLED_Display_GB2312_string(0, 0, "智能制造技术训练");
@@ -65,20 +65,20 @@ int main(void) {
         // UART1Deal();
         // SGP30_SelfCheck();
         LED1(OFF);
-		OLED_Clear();
+		// OLED_Clear();
 
 
-		OLED_Display_GB2312_string(0, 4, "Temp ");
-		OLED_Display_GB2312_string(0, 6, "Humi ");
-		OLED_Display_GB2312_string(0, 0, "CO   ");
-		OLED_Display_GB2312_string(0, 2, "TVOC ");
-		SGP30_read_result();
-		SHT30_read_result(0x44);
+		// OLED_Display_GB2312_string(0, 4, "Temp ");
+		// OLED_Display_GB2312_string(0, 6, "Humi ");
+		// OLED_Display_GB2312_string(0, 0, "CO   ");
+		// OLED_Display_GB2312_string(0, 2, "TVOC ");
+		// SGP30_read_result();
+		// SHT30_read_result(0x44);
 
-		OLED_Display_GB2312_string_format(40,4,127,5,"buff",0,1,0);
-		OLED_Display_GB2312_string_format(40,6,127,7,"buff",0,1,0);
+		// OLED_Display_GB2312_string_format(40,4,127,5,"buff",0,1,0);
+		// OLED_Display_GB2312_string_format(40,6,127,7,"buff",0,1,0);
 
-		continue;
+		// continue;
 
 
         flushOLED++;
@@ -130,15 +130,15 @@ int main(void) {
 			OLED_Display_GB2312_string(0, 4, "Temp ");
 			// OLED_ShowNum(40, 4, SHT30_GetTemperature(), 4);
 			// OLED_Display_GB2312_string(80, 4, "'C");
-			// sprintf(buff,"%.2f%'C",SHT30_GetTemperature());
-			OLED_Display_GB2312_string_format(40,4,127,5,"buff",0,1,0);
+			sprintf(buff,"%.2f%'C",SHT30_GetTemperature());
+			OLED_Display_GB2312_string_format(40,4,127,5,buff,0,1,1);
 
 			OLED_Display_GB2312_string(0, 6, "Humi ");
 			// OLED_ShowNum(40, 6, SHT30_GetHumidity(), 5);
 			// OLED_Display_GB2312_string(88, 6, "%");
 
-			// sprintf(buff,"%.2f%%",SHT30_GetHumidity());
-			OLED_Display_GB2312_string_format(40,6,127,7,"buff",0,1,0);
+			sprintf(buff,"%.2f%%",SHT30_GetHumidity());
+			OLED_Display_GB2312_string_format(40,6,127,7,buff,0,1,1);
 
 			// Delay_ms(300);
 			// OLED_Display_GB2312_string_format(40,6,127,7,buff,0,1,1);
